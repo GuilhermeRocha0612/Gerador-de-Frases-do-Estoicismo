@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Importando o Bootstrap para facilitar o layout responsivo e estilização -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Script JavaScript responsável pela lógica do projeto -->
+    <script type="text/javascript">
+      
+      // Função chamada ao clicar no botão "Nova frase"
+      function gerarFraseMotivacional(){
+
+        // Array contendo frases motivacionais de autores estoicos
+        const frases = [
+          "A felicidade da sua vida depende da qualidade dos seus pensamentos. – Marco Aurélio",
+          "Não é o que acontece com você, mas como você reage a isso que importa. – Epicteto",
+          "A riqueza não consiste em ter grandes posses, mas em ter poucas necessidades. – Epicteto",
+          "Se você quer melhorar, esteja contente em ser considerado tolo e estúpido. – Epicteto",
+          "A dificuldade mostra o que os homens são. – Epicteto",
+          "Você tem poder sobre sua mente, não sobre eventos externos. Perceba isso e encontrará força. – Marco Aurélio",
+          "A sorte é o que acontece quando a preparação encontra a oportunidade. – Sêneca",
+          "Apressa-te a viver bem e pensa que cada dia é, por si só, uma vida. – Sêneca",
+          "A maior riqueza é viver contente com pouco. – Sêneca",
+          "O homem que sofre antes de ser necessário, sofre mais do que o necessário. – Sêneca",
+          "A felicidade da sua vida depende da qualidade dos seus pensamentos. – Marco Aurélio",
+          "Você tem poder sobre sua mente, não sobre eventos externos. Perceba isso e encontrará força. – Marco Aurélio",
+          "Tudo o que ouvimos é uma opinião, não um fato. Tudo o que vemos é uma perspectiva, não a verdade. – Marco Aurélio",
+          "A alma se tinge com a cor de seus pensamentos. – Marco Aurélio",
+          "Se não é certo, não faça. Se não é verdade, não diga. – Marco Aurélio",
+          "A melhor vingança é ser diferente de quem causou o dano. – Marco Aurélio",
+          "Aceite as coisas às quais o destino o amarra e ame as pessoas com quem o destino o trouxe junto, mas faça isso de todo o coração. – Marco Aurélio",
+          "Quando você se levantar pela manhã, pense no privilégio de estar vivo, de pensar, de desfrutar, de amar. – Marco Aurélio",
+          "A perfeição do caráter é isso: viver cada dia como se fosse o último, sem frenesi, sem apatia, sem pretensão. – Marco Aurélio",
+          "Não perca mais tempo discutindo sobre o que um bom homem deve ser. Seja um. – Marco Aurélio"
+        ];
+
+        // Gera um número aleatório para selecionar uma frase do array
+        const numeroAleatorio = Math.floor(Math.random() * frases.length)
+        const frase = frases[numeroAleatorio]
+
+        // Atualiza o conteúdo do elemento com id 'frase' para exibir a frase sorteada
+        document.getElementById('frase').innerHTML = frase
+
+      }
+
+    </script>
+
+    <title>Frases Estóicas</title>
+  </head>
+
+  <body>
+    
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="jumbotron">
+              <h1 class="text-success display-5">Frases Estóicas</h1>
+              <hr>
+
+              <!-- Elemento onde a frase será exibida -->
+              <h2 class="display-4" id="frase">
+                Em busca do ótimo não se faz o bom.
+              </h2>
+
+              <hr>
+              <!-- Botão que chama a função para gerar uma nova frase -->
+              <button type="button" 
+              class="btn btn-success btn-lg" onclick="gerarFraseMotivacional()">Nova frase</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>
